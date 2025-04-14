@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Site de Culinária</title>
+</head>
+<body>
+    <h1>Bem-vindo ao Site de Culinária!</h1>
+    <a href="recipes">Ver Receitas</a>
+</body>
+</html>
