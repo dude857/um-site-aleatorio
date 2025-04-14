@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Receitas Simples</title>
+</head>
+<body>
+    <h1>Bem-vindo ao site de culinária!</h1>
+    <h2>Receitas:</h2>
+    <ul>
+        <% 
+            List<String> recipes = (List<String>) request.getAttribute("recipes");
+            for (String recipe : recipes) {
+        %>
+            <li><%= recipe %></li>
+        <% } %>
+    </ul>
+</body>
+</html>
