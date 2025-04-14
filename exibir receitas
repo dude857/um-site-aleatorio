@@ -1,0 +1,24 @@
+package com.example;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
+import java.util.List;
+
+@WebServlet("/recipes")
+public class RecipeServlet extends HttpServlet {
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        List<String> recipes = new ArrayList<>();
+        recipes.add("Bolo de Cenoura");
+        recipes.add("Pão de Queijo");
+        recipes.add("Feijoada");
+
+        req.setAttribute("recipes", recipes);
+        req.getRequestDispatcher("/recipes.jsp").forward(req, resp);
+    }
+}
